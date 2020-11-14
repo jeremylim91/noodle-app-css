@@ -24,5 +24,8 @@
     "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1"
   },
-  "type": "module"
+  "type": "module",
+  "emmet.includeLanguages": {
+    "ejs": "html"
+  }
 }
