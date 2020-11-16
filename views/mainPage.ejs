@@ -16,7 +16,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous"
       />
-      <link rel="stylesheet" href="mainPage.css" />
+      <!-- <link rel="stylesheet" href="http://localhost:3004/mainPage.css" /> -->
 
       <title>Welcome! This Page Celebrates Noodles!</title>
     </head>
@@ -39,7 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link" href="/"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
@@ -100,22 +100,15 @@
               <% objectToDisplay.forEach((element, index) => {%>
                 <li> <a href="<%=`/recipe/${index}`%>"> <%= element.label%></a> </li>
              <%  }); %>
-              <li><a href="recipe1.html">Cacio E Pepe</a></li>
-              <li><a href="recipe2.html">Quick Stovetop Mac and Cheese</a></li>
-              <li><a href="recipe3.html">Onion Pasta</a></li>
-              <li><a href="recipe4.html"> Caramalized Onion Pasta</a></li>
             </ol>
           </div>
         
         <div class="col-s-12 col-md-5 mainCol">
           <h2>Categories</h2>
           <ol>
-            <% objectToDisplay.forEach((element, index) => { %>
-              <li><a href="<%=`/category/${index}`%>"> <%=element.category%></a></li>
+            <% uniqueCategoriesArray.forEach((element) => { %>
+              <li><a href="<%=`/category/${element}`%>"> <%=element%></a></li>
              <% }); %>
-        
-            <li><a href="category1.html">Chicken</a></li>
-            <li><a href="category2.html">Onion</a></li>
           </ol>
         </div>
       </div>
